@@ -6,9 +6,9 @@
 //
 //
 
-#import "TextTableViewCell.h"
+#import "FISTextTableViewCell.h"
 
-@implementation TextTableViewCell
+@implementation FISTextTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code

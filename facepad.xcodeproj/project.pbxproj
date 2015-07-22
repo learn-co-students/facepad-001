@@ -11,7 +11,7 @@
 		4BF6F18D544D4B43AB53CEC1 /* FISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E7D20AB93443AAE831377 /* FISAppDelegate.m */; };
 		86B12BE4DC976B9D8136F1CD /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4F8F6C70C07E1998ABE051 /* libPods-unit_tests.a */; };
 		D80D149D19F09B720018489E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80D149C19F09B720018489E /* Main.storyboard */; };
-		D80D14A619F0A2C30018489E /* TextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D80D14A519F0A2C30018489E /* TextTableViewCell.m */; };
+		D80D14A619F0A2C30018489E /* FISTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D80D14A519F0A2C30018489E /* FISTextTableViewCell.m */; };
 		D80D14A919F0A2E20018489E /* FISImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D80D14A819F0A2E20018489E /* FISImageTableViewCell.m */; };
 		D80D14AC19F0A4D30018489E /* FISNewsFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80D14AB19F0A4D30018489E /* FISNewsFeedTableViewController.m */; };
 		D80D14AF19F0A6840018489E /* FISContent.m in Sources */ = {isa = PBXBuildFile; fileRef = D80D14AE19F0A6840018489E /* FISContent.m */; };
@@ -20,6 +20,8 @@
 		D80D14B619F14E120018489E /* FISUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D80D14B519F14E120018489E /* FISUser.m */; };
 		D80D14B819F151830018489E /* coverimage.png in Resources */ = {isa = PBXBuildFile; fileRef = D80D14B719F151830018489E /* coverimage.png */; };
 		D80D14BB19F152320018489E /* FISCoverImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D80D14BA19F152320018489E /* FISCoverImageTableViewCell.m */; };
+		E2D5EFDE1B5ED5500011A073 /* FISUserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EFDD1B5ED5500011A073 /* FISUserSpec.m */; };
+		E2D5EFE01B5ED7270011A073 /* FISNewsFeedTableViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EFDF1B5ED7270011A073 /* FISNewsFeedTableViewControllerSpec.m */; };
 		F2DA577D1EC348D78215A834 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 047361924796455E8BB2675E /* main.m */; };
 		F3A9137FBC40455D8A840D98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38670AEC748C4D8F923E6887 /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -48,8 +50,8 @@
 		BF3743855881463492EBBA59 /* facepad-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "facepad-Prefix.pch"; sourceTree = "<group>"; };
 		BF65580E223247C2968DC75D /* facepad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = facepad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80D149C19F09B720018489E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		D80D14A419F0A2C30018489E /* TextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextTableViewCell.h; sourceTree = "<group>"; };
-		D80D14A519F0A2C30018489E /* TextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextTableViewCell.m; sourceTree = "<group>"; };
+		D80D14A419F0A2C30018489E /* FISTextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISTextTableViewCell.h; sourceTree = "<group>"; };
+		D80D14A519F0A2C30018489E /* FISTextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISTextTableViewCell.m; sourceTree = "<group>"; };
 		D80D14A719F0A2E20018489E /* FISImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISImageTableViewCell.h; sourceTree = "<group>"; };
 		D80D14A819F0A2E20018489E /* FISImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISImageTableViewCell.m; sourceTree = "<group>"; };
 		D80D14AA19F0A4D30018489E /* FISNewsFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISNewsFeedTableViewController.h; sourceTree = "<group>"; };
@@ -63,6 +65,8 @@
 		D80D14B719F151830018489E /* coverimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coverimage.png; sourceTree = "<group>"; };
 		D80D14B919F152320018489E /* FISCoverImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISCoverImageTableViewCell.h; sourceTree = "<group>"; };
 		D80D14BA19F152320018489E /* FISCoverImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISCoverImageTableViewCell.m; sourceTree = "<group>"; };
+		E2D5EFDD1B5ED5500011A073 /* FISUserSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISUserSpec.m; sourceTree = "<group>"; };
+		E2D5EFDF1B5ED7270011A073 /* FISNewsFeedTableViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISNewsFeedTableViewControllerSpec.m; sourceTree = "<group>"; };
 		F5DA605375F54E3D9C8CC12A /* FISAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FISAppDelegate.h; sourceTree = "<group>"; };
 		FF4F8F6C70C07E1998ABE051 /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -131,22 +135,22 @@
 		495B53C458994BF3BB9CFD10 /* facepad */ = {
 			isa = PBXGroup;
 			children = (
+				F5DA605375F54E3D9C8CC12A /* FISAppDelegate.h */,
+				1F8E7D20AB93443AAE831377 /* FISAppDelegate.m */,
+				D80D14B419F14E120018489E /* FISUser.h */,
+				D80D14B519F14E120018489E /* FISUser.m */,
 				D80D14AD19F0A6840018489E /* FISContent.h */,
 				D80D14AE19F0A6840018489E /* FISContent.m */,
 				D80D14AA19F0A4D30018489E /* FISNewsFeedTableViewController.h */,
 				D80D14AB19F0A4D30018489E /* FISNewsFeedTableViewController.m */,
-				D80D14B419F14E120018489E /* FISUser.h */,
-				D80D14B519F14E120018489E /* FISUser.m */,
-				D80D14A419F0A2C30018489E /* TextTableViewCell.h */,
-				D80D14A519F0A2C30018489E /* TextTableViewCell.m */,
-				F5DA605375F54E3D9C8CC12A /* FISAppDelegate.h */,
-				1F8E7D20AB93443AAE831377 /* FISAppDelegate.m */,
-				FF2E31828EF54A4794F04731 /* Resources */,
-				D80D149C19F09B720018489E /* Main.storyboard */,
+				D80D14A419F0A2C30018489E /* FISTextTableViewCell.h */,
+				D80D14A519F0A2C30018489E /* FISTextTableViewCell.m */,
 				D80D14B919F152320018489E /* FISCoverImageTableViewCell.h */,
 				D80D14BA19F152320018489E /* FISCoverImageTableViewCell.m */,
 				D80D14A719F0A2E20018489E /* FISImageTableViewCell.h */,
 				D80D14A819F0A2E20018489E /* FISImageTableViewCell.m */,
+				FF2E31828EF54A4794F04731 /* Resources */,
+				D80D149C19F09B720018489E /* Main.storyboard */,
 			);
 			path = facepad;
 			sourceTree = "<group>";
@@ -181,6 +185,8 @@
 		8FD4BAF5172A41A381C6EF4C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				E2D5EFDD1B5ED5500011A073 /* FISUserSpec.m */,
+				E2D5EFDF1B5ED7270011A073 /* FISNewsFeedTableViewControllerSpec.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -349,6 +355,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2D5EFE01B5ED7270011A073 /* FISNewsFeedTableViewControllerSpec.m in Sources */,
+				E2D5EFDE1B5ED5500011A073 /* FISUserSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BF6F18D544D4B43AB53CEC1 /* FISAppDelegate.m in Sources */,
-				D80D14A619F0A2C30018489E /* TextTableViewCell.m in Sources */,
+				D80D14A619F0A2C30018489E /* FISTextTableViewCell.m in Sources */,
 				D80D14A919F0A2E20018489E /* FISImageTableViewCell.m in Sources */,
 				F2DA577D1EC348D78215A834 /* main.m in Sources */,
 				D80D14B619F14E120018489E /* FISUser.m in Sources */,

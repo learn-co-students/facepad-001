@@ -9,13 +9,12 @@
 #import "FISNewsFeedTableViewController.h"
 #import "FISContent.h"
 #import "FISUser.h"
-#import "TextTableViewCell.h"
+#import "FISTextTableViewCell.h"
 #import "FISCoverImageTableViewCell.h"
 #import "FISImageTableViewCell.h"
 
 @interface FISNewsFeedTableViewController ()
 @property (strong, nonatomic) NSMutableArray *posts;
-@property (strong, nonatomic) FISUser *user;
 @end
 
 @implementation FISNewsFeedTableViewController
@@ -93,7 +92,7 @@
     FISContent *content = self.posts[indexPath.row-1];
 
     if (content.textContent) {
-        TextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"textCell"];
+        FISTextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"textCell"];
         cell.profilePic.image = content.user.profilePic;
         cell.profileUsername.text = content.user.username;
         cell.postContent.text = content.textContent;

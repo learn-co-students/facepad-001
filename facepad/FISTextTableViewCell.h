@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TextTableViewCell : UITableViewCell
+@interface FISTextTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *profilePic;
 @property (strong, nonatomic) IBOutlet UILabel *profileUsername;
 @property (strong, nonatomic) IBOutlet UILabel *postContent;

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class FISUser;
 @interface FISNewsFeedTableViewController : UITableViewController
-
+@property (strong, nonatomic) FISUser *user;
 @end
