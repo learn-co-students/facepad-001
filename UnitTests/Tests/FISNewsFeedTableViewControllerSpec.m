@@ -13,6 +13,9 @@
 #import "FISTextTableViewCell.h"
 #import "FISCoverImageTableViewCell.h"
 #import "FISImageTableViewCell.h"
+#import "FISTextPost.h"
+#import "FISImagePost.h"
+#import "OCMockito.h"
 
 SpecBegin(FISNewsFeedTableViewController)
 
@@ -21,60 +24,112 @@ describe(@"FISNewsFeedTableViewController", ^{
     __block UIWindow *mainWindow;
     __block FISNewsFeedTableViewController *fisTVC;
     __block FISUser *testUser;
+    __block FISTextPost *textPost1;
+    __block FISImagePost *imagePost1;
     
     beforeAll(^{
+        // set up test user with posts
         testUser = [[FISUser alloc] init];
+        
         testUser.username = @"Joe Burgess";
         testUser.profilePic = [UIImage imageNamed:@"joe-burgess"];
         testUser.cover = [UIImage imageNamed:@"coverimage"];
-
+        
+        textPost1 = [[FISTextPost alloc] init];
+        textPost1.textContent = @"Excited for the first day of school!";
+        textPost1.user = testUser;
+        
+        imagePost1 = [[FISImagePost alloc] init];
+        imagePost1.imageContent = [UIImage imageNamed:@"flying"];
+        imagePost1.user = testUser;
+        
+        testUser.posts = [@[textPost1, imagePost1] mutableCopy];
+        
         // if it's breaking here, add this storyboardID to your tableViewController
         fisTVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"FISNewsFeedTableViewController"];
         
+        // pass testUser to fisTVC and put it on the window
         fisTVC.user = testUser;
         mainWindow = ((FISAppDelegate*)[UIApplication sharedApplication].delegate).window;
         mainWindow.rootViewController = fisTVC;
         [mainWindow makeKeyAndVisible];
     });
     
-    describe(@"FISNewsFeedTableViewController", ^{
-        it(@"has a public user property that takes an FISUser", ^{
+    describe(@"has", ^{
+        it(@"a public user property that takes an FISUser", ^{
             expect([fisTVC respondsToSelector:@selector(user)]).to.beTruthy;
-            expect(fisTVC.user).to.beKindOf([FISUser class]);
+            expect(fisTVC.user).to.equal(testUser);
+            NSLog(@"%@", testUser);
         });
     });
     
-    describe(@"TVC has different kinds of cells", ^{
+    describe(@"FISCoverImageTableViewCell", ^{
         
-        it(@"has an FISCoverImageTableViewCell as the first cell", ^{
+        __block FISCoverImageTableViewCell *coverCell;
+        
+        beforeAll(^{
             NSIndexPath *ip = [NSIndexPath indexPathForRow:0 inSection:0];
-            FISCoverImageTableViewCell *cell = (FISCoverImageTableViewCell*)[fisTVC.tableView cellForRowAtIndexPath:ip];
-            
-            expect(cell).to.beKindOf([FISCoverImageTableViewCell class]);
-
-            expect(cell.cover).to.beKindOf([UIImageView class]);
+            coverCell = (FISCoverImageTableViewCell*)[fisTVC.tableView cellForRowAtIndexPath:ip];
         });
         
-        it(@"has an FISTextTableViewCell next (with appropriate properties)", ^{
+        it(@"is the first cell", ^{
+            expect(coverCell).to.beKindOf([FISCoverImageTableViewCell class]);
+        });
+        
+        it(@"has a UIImageView property named cover", ^{
+            expect(coverCell.cover).to.beKindOf([UIImageView class]);
+            expect(coverCell.cover.image).to.equal(testUser.cover);
+        });
+    });
+    
+    describe(@"FISTextTableViewCell", ^{
+        
+        __block FISTextTableViewCell *textCell;
+        __block FISTextPost *thisTextPost;
+        
+        beforeAll(^{
             NSIndexPath *ip = [NSIndexPath indexPathForRow:1 inSection:0];
-            FISTextTableViewCell *cell = (FISTextTableViewCell*)[fisTVC.tableView cellForRowAtIndexPath:ip];
-            
-            expect(cell).to.beKindOf([FISTextTableViewCell class]);
-            
-            expect(cell.profilePic).to.beKindOf([UIImageView class]);
-            expect(cell.profileUsername).to.beKindOf([UILabel class]);
-            expect(cell.postContent).to.beKindOf([UILabel class]);
+            textCell = (FISTextTableViewCell*)[fisTVC.tableView cellForRowAtIndexPath:ip];
+            thisTextPost = testUser.posts[ip.row-1];
         });
         
-        it(@"has an FISImageTableViewCell last (with appropriate properties)", ^{
+        it(@"is the next cell", ^{
+            expect(textCell).to.beKindOf([FISTextTableViewCell class]);
+        });
+        
+        it(@"has a profile picture and username", ^{
+            expect(textCell.profilePic.image).to.equal(testUser.profilePic);
+            expect(textCell.profileUsername.text).to.equal(testUser.username);
+        });
+        
+        it(@"contains the appropriate text content", ^{
+            expect(textCell.postContent.text).to.equal(thisTextPost.textContent);
+        });
+    });
+    
+    describe(@"FISImageTableViewCell", ^{
+        
+        __block FISImageTableViewCell *imageCell;
+        __block FISImagePost *thisImagePost;
+        
+        beforeAll(^{
             NSIndexPath *ip = [NSIndexPath indexPathForRow:2 inSection:0];
-            FISImageTableViewCell *cell = (FISImageTableViewCell*)[fisTVC.tableView cellForRowAtIndexPath:ip];
+            thisImagePost = testUser.posts[ip.row-1];
+            imageCell = (FISImageTableViewCell*)[fisTVC.tableView cellForRowAtIndexPath:ip];
+        });
+        
+        it(@"is the last cell", ^{
+            expect(imageCell).to.beKindOf([FISImageTableViewCell class]);
+        });
+        
+        it(@"has a profile picture and username", ^{
+            expect(imageCell.profilePic.image).to.equal(testUser.profilePic);
+            expect(imageCell.profileUsername.text).to.equal(testUser.username);
+        });
+        
+        it(@"contains the appropriate image content", ^{
+            expect(imageCell.contentImage.image).to.equal(thisImagePost.imageContent);
             
-            expect(cell).to.beKindOf([FISImageTableViewCell class]);
-            
-            expect(cell.profilePic).to.beKindOf([UIImageView class]);
-            expect(cell.profileUsername).to.beKindOf([UILabel class]);
-            expect(cell.contentImage).to.beKindOf([UIImageView class]);
         });
     });
 });

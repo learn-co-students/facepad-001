@@ -1,4 +1,4 @@
-#import "SPTExampleGroup.h"
+ #import "SPTExampleGroup.h"
 #import "SPTExample.h"
 #import "SPTCompiledExample.h"
 #import "SPTSpec.h"

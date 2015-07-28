@@ -13,4 +13,5 @@
 @property (strong, nonatomic) NSString *username;
 @property (strong, nonatomic) UIImage *profilePic;
 @property (strong, nonatomic) UIImage *cover;
+@property (strong, nonatomic) NSMutableArray *posts;
 @end
