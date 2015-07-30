@@ -37,24 +37,26 @@ describe(@"FISUser", ^{
         testUser.posts = [@[textPost1, imagePost1] mutableCopy];
     });
     
-    it(@"has properties for username, profile picture, cover image, and posts, with no extra stuff modifying their setters",
-       ^{
-           expect([testUser respondsToSelector:@selector(username)]).to.beTruthy;
-           expect(testUser.username).to.beKindOf([NSString class]);
-           expect(testUser.username).to.equal(@"jmburgess");
-           
-           expect([testUser respondsToSelector:@selector(profilePic)]).to.beTruthy;
-           expect(testUser.profilePic).to.beKindOf([UIImage class]);
-           expect(testUser.profilePic).to.equal([UIImage imageNamed:@"joe-burgess"]);
-           
-           expect([testUser respondsToSelector:@selector(cover)]).to.beTruthy;
-           expect(testUser.cover).to.beKindOf([UIImage class]);
-           expect(testUser.cover).to.equal([UIImage imageNamed:@"coverimage"]);
-           
-           expect([testUser respondsToSelector:@selector(posts)]).to.beTruthy;
-           expect(testUser.posts).to.beKindOf([NSMutableArray class]);
-           expect(testUser.posts).to.equal([@[textPost1, imagePost1] mutableCopy]);
-       });
+    it(@"has properties for username",^{
+        expect(testUser.username).to.beKindOf([NSString class]);
+        expect(testUser.username).to.equal(@"jmburgess");
+    });
+    
+    it(@"has a property for profile picture", ^{
+        expect(testUser.profilePic).to.beKindOf([UIImage class]);
+        expect(testUser.profilePic).to.equal([UIImage imageNamed:@"joe-burgess"]);
+    });
+    
+    it(@"has a property for cover image", ^{
+        expect(testUser.cover).to.beKindOf([UIImage class]);
+        expect(testUser.cover).to.equal([UIImage imageNamed:@"coverimage"]);
+    });
+    
+    it(@"has a property for posts", ^{
+        expect(testUser.posts).to.beKindOf([NSMutableArray class]);
+        expect(testUser.posts).to.equal([@[textPost1, imagePost1] mutableCopy]);
+    });
+    
 });
 
 SpecEnd
