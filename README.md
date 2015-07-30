@@ -1,7 +1,4 @@
----
-tags: custom_tableViewCells, UITableView, storyboard
-languages: objc
----
+
 # facepad
 
 Let's build a user news feed
