@@ -1,5 +1,8 @@
 
-# facepad
+# Facepad (advanced) 
+### (Dynamic Custom Cells)
+
+## Goals
 
 Let's build a user news feed
 

@@ -7,6 +7,8 @@
 //
 
 #import "Specta.h"
+#define EXP_SHORTHAND
+#import "Expecta.h"
 #import "FISAppDelegate.h"
 #import "FISUser.h"
 #import "FISNewsFeedTableViewController.h"

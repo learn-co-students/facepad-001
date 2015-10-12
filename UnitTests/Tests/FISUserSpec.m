@@ -7,6 +7,8 @@
 //
 
 #import "Specta.h"
+#define EXP_SHORTHAND
+#import "Expecta.h"
 #import "FISUser.h"
 #import "FISImagePost.h"
 #import "FISTextPost.h"
