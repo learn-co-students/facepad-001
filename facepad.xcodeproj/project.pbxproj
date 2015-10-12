@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		123AC3603B044B81B556C4F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740CDFF7FA944F66B1714894 /* Foundation.framework */; };
 		4BF6F18D544D4B43AB53CEC1 /* FISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E7D20AB93443AAE831377 /* FISAppDelegate.m */; };
-		4D5549351BCC0A75001E3D77 /* FISNewsFeedTableViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5549331BCC0A75001E3D77 /* FISNewsFeedTableViewControllerSpec.m */; settings = {ASSET_TAGS = (); }; };
-		4D5549361BCC0A75001E3D77 /* FISUserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5549341BCC0A75001E3D77 /* FISUserSpec.m */; settings = {ASSET_TAGS = (); }; };
 		4D5549381BCC0BBF001E3D77 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5549371BCC0BBF001E3D77 /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		86B12BE4DC976B9D8136F1CD /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4F8F6C70C07E1998ABE051 /* libPods-unit_tests.a */; };
 		D80D149D19F09B720018489E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80D149C19F09B720018489E /* Main.storyboard */; };
@@ -47,8 +45,6 @@
 		1F8E7D20AB93443AAE831377 /* FISAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FISAppDelegate.m; sourceTree = "<group>"; };
 		38670AEC748C4D8F923E6887 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		387DAA87D28D4A2EBFCEB483 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D5549331BCC0A75001E3D77 /* FISNewsFeedTableViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISNewsFeedTableViewControllerSpec.m; sourceTree = "<group>"; };
-		4D5549341BCC0A75001E3D77 /* FISUserSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISUserSpec.m; sourceTree = "<group>"; };
 		4D5549371BCC0BBF001E3D77 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		590FA3F31A5DCB795884A780 /* Pods-unit_tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6973C89B0B1442D6B3CA8976 /* facepad-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "facepad-Info.plist"; sourceTree = "<group>"; };
@@ -152,6 +148,18 @@
 			children = (
 				F5DA605375F54E3D9C8CC12A /* FISAppDelegate.h */,
 				1F8E7D20AB93443AAE831377 /* FISAppDelegate.m */,
+				D80D149C19F09B720018489E /* Main.storyboard */,
+				4D55493A1BCC0D83001E3D77 /* View Controllers */,
+				4D55493B1BCC0D93001E3D77 /* Custom UITableViewCells */,
+				4D5549391BCC0D74001E3D77 /* Models */,
+				FF2E31828EF54A4794F04731 /* Resources */,
+			);
+			path = facepad;
+			sourceTree = "<group>";
+		};
+		4D5549391BCC0D74001E3D77 /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				D80D14B419F14E120018489E /* FISUser.h */,
 				D80D14B519F14E120018489E /* FISUser.m */,
 				D80D14AD19F0A6840018489E /* FISContent.h */,
@@ -160,20 +168,32 @@
 				E22AD1FF1B6009D70022C8B0 /* FISImagePost.m */,
 				E22AD2011B6009DD0022C8B0 /* FISTextPost.h */,
 				E22AD2021B6009DD0022C8B0 /* FISTextPost.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		4D55493A1BCC0D83001E3D77 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				E22AD2071B600B7F0022C8B0 /* FISUsernamesTableViewController.h */,
 				E22AD2081B600B7F0022C8B0 /* FISUsernamesTableViewController.m */,
 				D80D14AA19F0A4D30018489E /* FISNewsFeedTableViewController.h */,
 				D80D14AB19F0A4D30018489E /* FISNewsFeedTableViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4D55493B1BCC0D93001E3D77 /* Custom UITableViewCells */ = {
+			isa = PBXGroup;
+			children = (
 				D80D14A419F0A2C30018489E /* FISTextTableViewCell.h */,
 				D80D14A519F0A2C30018489E /* FISTextTableViewCell.m */,
 				D80D14B919F152320018489E /* FISCoverImageTableViewCell.h */,
 				D80D14BA19F152320018489E /* FISCoverImageTableViewCell.m */,
 				D80D14A719F0A2E20018489E /* FISImageTableViewCell.h */,
 				D80D14A819F0A2E20018489E /* FISImageTableViewCell.m */,
-				FF2E31828EF54A4794F04731 /* Resources */,
-				D80D149C19F09B720018489E /* Main.storyboard */,
 			);
-			path = facepad;
+			name = "Custom UITableViewCells";
 			sourceTree = "<group>";
 		};
 		693E17BB35094DA5BD8CF323 /* Products */ = {
