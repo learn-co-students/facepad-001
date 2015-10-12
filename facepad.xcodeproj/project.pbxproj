@@ -25,6 +25,9 @@
 		E22AD2091B600B7F0022C8B0 /* FISUsernamesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22AD2081B600B7F0022C8B0 /* FISUsernamesTableViewController.m */; };
 		E2D5EFDE1B5ED5500011A073 /* FISUserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EFDD1B5ED5500011A073 /* FISUserSpec.m */; };
 		E2D5EFE01B5ED7270011A073 /* FISNewsFeedTableViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EFDF1B5ED7270011A073 /* FISNewsFeedTableViewControllerSpec.m */; };
+		D80D14B119F0AC500018489E /* joe-burgess.png in Resources */ = {isa = PBXBuildFile; fileRef = D80D14B019F0AC500018489E /* joe-burgess.png */; };
+		D80D14B319F0ACAE0018489E /* flying.png in Resources */ = {isa = PBXBuildFile; fileRef = D80D14B219F0ACAE0018489E /* flying.png */; };
+		D80D14B819F151830018489E /* coverimage.png in Resources */ = {isa = PBXBuildFile; fileRef = D80D14B719F151830018489E /* coverimage.png */; };
 		F2DA577D1EC348D78215A834 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 047361924796455E8BB2675E /* main.m */; };
 		F3A9137FBC40455D8A840D98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38670AEC748C4D8F923E6887 /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -76,6 +79,9 @@
 		E22AD2081B600B7F0022C8B0 /* FISUsernamesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISUsernamesTableViewController.m; sourceTree = "<group>"; };
 		E2D5EFDD1B5ED5500011A073 /* FISUserSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISUserSpec.m; sourceTree = "<group>"; };
 		E2D5EFDF1B5ED7270011A073 /* FISNewsFeedTableViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISNewsFeedTableViewControllerSpec.m; sourceTree = "<group>"; };
+		D80D14B019F0AC500018489E /* joe-burgess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "joe-burgess.png"; sourceTree = "<group>"; };
+		D80D14B219F0ACAE0018489E /* flying.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flying.png; sourceTree = "<group>"; };
+		D80D14B719F151830018489E /* coverimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coverimage.png; sourceTree = "<group>"; };
 		F5DA605375F54E3D9C8CC12A /* FISAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FISAppDelegate.h; sourceTree = "<group>"; };
 		FF4F8F6C70C07E1998ABE051 /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -423,6 +429,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "facepad/Resources/Other-Sources/facepad-Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -441,6 +448,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "facepad/Resources/Other-Sources/facepad-Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"$(inherited)",
@@ -516,7 +524,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -588,7 +596,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};

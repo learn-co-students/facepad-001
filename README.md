@@ -1,7 +1,4 @@
----
-tags: custom_tableViewCells, UITableView, storyboard
-languages: objc
----
+
 # facepad
 
 Let's build a user news feed
@@ -18,7 +15,7 @@ Let's build a user news feed
 
   * Create an initial Table View Controller with a list of a bunch of usernames.
   * When you select a username it should push on a new Table View Controller you should get a view that looks something like this:
-
+  ![](http://ironboard-curriculum-content.s3.amazonaws.com/iOS/facepad-image.png)
   * The top item is a cover image that when you scroll up, it should scroll up as well.
   * The second cell is a text content cell
   * the third cell is an image content cell

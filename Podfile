@@ -1,14 +1,12 @@
-platform :ios, '7.0'
+platform :ios, '8.0'
 source 'https://github.com/CocoaPods/Specs.git'
 
 # Add Application pods here
 
 target :unit_tests, :exclusive => true do
   link_with 'UnitTests'
-  pod 'Specta',     :git=>'git@github.com:specta/specta.git'
-  pod 'Expecta'
-  pod 'OCMockito'
-  pod 'Swizzlean'
-  pod 'OHHTTPStubs'
-  pod 'KIF'
+  pod 'Specta',     '~> 1.0'
+  pod 'Expecta',    '~> 1.0'
+  pod 'Swizzlean',  '~> 0.2'
+  pod 'KIF',        '~> 3.3'
 end
