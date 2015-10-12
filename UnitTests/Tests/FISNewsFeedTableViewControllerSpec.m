@@ -17,7 +17,6 @@
 #import "FISImageTableViewCell.h"
 #import "FISTextPost.h"
 #import "FISImagePost.h"
-#import "OCMockito.h"
 
 SpecBegin(FISNewsFeedTableViewController)
 
