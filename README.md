@@ -45,3 +45,5 @@ Alright! Let's tie it all together.
 * Those profile pic + username headers look like they could be a reusable component. Create a new `UIView` subclass that has those two things. You'll probably want to make a view with [a XIB](http://qnoid.com/2013/03/20/How-to-implement-a-reusable-UIView.html).
 * Create a custom cell for the first view controller that displays not only the user's name, but also their photo and the number of posts they have made.
 
+
+<a href='https://learn.co/lessons/facepad' data-visibility='hidden'>View this lesson on Learn.co</a>
