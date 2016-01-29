@@ -46,4 +46,4 @@ Alright! Let's tie it all together.
 * Create a custom cell for the first view controller that displays not only the user's name, but also their photo and the number of posts they have made.
 
 
-<a href='https://learn.co/lessons/facepad' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/facepad' title='Facepad'>Facepad</a> on Learn.co and start learning to code for free.</p>
