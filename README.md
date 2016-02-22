@@ -35,10 +35,12 @@ Now let's make our storyboard.
 
 Alright! Let's tie it all together.
 
-* Make the `UITableViewController` subclass for the initial view controller (the one that displays the lists of users). In its `-viewDidLoad`, make some dummy users and posts, and use that to power the table view. (For now, just add images to your app. Open the `Images.xcassets` file in Xcode and drag in some images. You can load them in code with `+[UIImage imageNamed:]`.)
-* Make the `UITableViewController` subclass for the user feed controller. Think about how best to pass the data (i.e., the user to display) from the first view controller on to the second.
+* Make the `UITableViewController` subclass for the initial view controller (the one that displays the lists of users). In its `-viewDidLoad`, make some dummy users and posts, and use that to power the table view. (For now, just add images to your app. Open the `Images.xcassets` file in Xcode and drag in some images. You can load them in code with `[UIImage imageNamed:]`.)
+* Make the `UITableViewController` subclass for the user's feed. Think about how best to pass the data (i.e., the user to display) from the first view controller on to the second.   
+   * For the sake of the tests, name this UITableViewController subclass `FISNewsFeedTableViewController` and set its Storyboard ID "FISNewsFeedTableViewController". You can set the storyboard ID in the identity inspector ("newspaper" icon) when the table view controller is selected.
 * Make `UITableviewCell` subclasses for each of the prototype cells, and wire up outlets so you access the views inside them.
     * In your user feed view controller's `-tableView:cellForRowAtIndexPath:`, you'll need to inspect the cell you're being asked to display, pick the corresponding reuse identifier, and cast the cell from `-dequeueReusableCellWithIdentifier:forIndexPath:` to the correct class so you can set it up appropriately.
+    * For the tests, name the corresponding cell subclasses `FISCoverImageTableViewCell`, `FISImageTableViewCell`, `FISTextTableViewCell`
 
 ## Advanced
 
