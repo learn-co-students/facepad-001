@@ -4,7 +4,7 @@
 ## Objectives
 
 1. Build dynamic custom table view cells.
-2. Represent multiple types of object in the same table view.
+2. Represent multiple types of objects in the same table view.
 
 ## Instructions
 
@@ -49,3 +49,5 @@ Alright! Let's tie it all together.
 
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/facepad' title='Facepad'>Facepad</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/facepad'>(advanced) Facepad - Dynamic Custom Cells</a> on Learn.co and start learning to code for free.</p>
