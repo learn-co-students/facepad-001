@@ -68,7 +68,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimpleIdentifier];
     }
 
-    cell.textLabel.text = self.users[indexPath.row];
+    FISUser *user = self.users[indexPath.row];
+    cell.textLabel.text = user.username;
     return cell;
 }
 
