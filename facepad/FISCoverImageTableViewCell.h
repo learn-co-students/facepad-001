@@ -10,4 +10,6 @@
 
 @interface FISCoverImageTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *cover;
+
 @end

@@ -10,4 +10,8 @@
 
 @interface FISImageTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *profilePic;
+@property (weak, nonatomic) IBOutlet UITextView *profileUsername;
+@property (weak, nonatomic) IBOutlet UIImageView *contentImage;
+
 @end
