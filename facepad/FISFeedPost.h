@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FISUser.h"
 
 @interface FISFeedPost : NSObject
 
-@property (nonatomic) NSString *user;
+@property (nonatomic) FISUser *user;
 @property (nonatomic) NSString *date;
 
 @end
