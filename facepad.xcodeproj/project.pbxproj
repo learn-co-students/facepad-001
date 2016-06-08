@@ -21,6 +21,11 @@
 		D91FB80D1D089FC100AB609E /* FISFeedPost.m in Sources */ = {isa = PBXBuildFile; fileRef = D91FB80C1D089FC100AB609E /* FISFeedPost.m */; };
 		D91FB8101D08A05200AB609E /* FISTextPost.m in Sources */ = {isa = PBXBuildFile; fileRef = D91FB80F1D08A05200AB609E /* FISTextPost.m */; };
 		D91FB8131D08A08A00AB609E /* FISImagePost.m in Sources */ = {isa = PBXBuildFile; fileRef = D91FB8121D08A08A00AB609E /* FISImagePost.m */; };
+		D91FB8161D08A47500AB609E /* FISUserIndexTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D91FB8151D08A47500AB609E /* FISUserIndexTableViewController.m */; };
+		D91FB81B1D08A88500AB609E /* FISNewsFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D91FB81A1D08A88500AB609E /* FISNewsFeedTableViewController.m */; };
+		D91FB81E1D08AEEF00AB609E /* FISTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D91FB81D1D08AEEF00AB609E /* FISTextTableViewCell.m */; };
+		D91FB8241D08AF1C00AB609E /* FISCoverImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D91FB8231D08AF1C00AB609E /* FISCoverImageTableViewCell.m */; };
+		D91FB8271D08AF3100AB609E /* FISImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D91FB8261D08AF3100AB609E /* FISImageTableViewCell.m */; };
 		F2DA577D1EC348D78215A834 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 047361924796455E8BB2675E /* main.m */; };
 		F3A9137FBC40455D8A840D98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38670AEC748C4D8F923E6887 /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -63,6 +68,16 @@
 		D91FB80F1D08A05200AB609E /* FISTextPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISTextPost.m; sourceTree = "<group>"; };
 		D91FB8111D08A08A00AB609E /* FISImagePost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISImagePost.h; sourceTree = "<group>"; };
 		D91FB8121D08A08A00AB609E /* FISImagePost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISImagePost.m; sourceTree = "<group>"; };
+		D91FB8141D08A47500AB609E /* FISUserIndexTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISUserIndexTableViewController.h; sourceTree = "<group>"; };
+		D91FB8151D08A47500AB609E /* FISUserIndexTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISUserIndexTableViewController.m; sourceTree = "<group>"; };
+		D91FB8191D08A88500AB609E /* FISNewsFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISNewsFeedTableViewController.h; sourceTree = "<group>"; };
+		D91FB81A1D08A88500AB609E /* FISNewsFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISNewsFeedTableViewController.m; sourceTree = "<group>"; };
+		D91FB81C1D08AEEF00AB609E /* FISTextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISTextTableViewCell.h; sourceTree = "<group>"; };
+		D91FB81D1D08AEEF00AB609E /* FISTextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISTextTableViewCell.m; sourceTree = "<group>"; };
+		D91FB8221D08AF1C00AB609E /* FISCoverImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISCoverImageTableViewCell.h; sourceTree = "<group>"; };
+		D91FB8231D08AF1C00AB609E /* FISCoverImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISCoverImageTableViewCell.m; sourceTree = "<group>"; };
+		D91FB8251D08AF3100AB609E /* FISImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISImageTableViewCell.h; sourceTree = "<group>"; };
+		D91FB8261D08AF3100AB609E /* FISImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISImageTableViewCell.m; sourceTree = "<group>"; };
 		F5DA605375F54E3D9C8CC12A /* FISAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FISAppDelegate.h; sourceTree = "<group>"; };
 		FF4F8F6C70C07E1998ABE051 /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,6 +158,16 @@
 				D91FB80F1D08A05200AB609E /* FISTextPost.m */,
 				D91FB8111D08A08A00AB609E /* FISImagePost.h */,
 				D91FB8121D08A08A00AB609E /* FISImagePost.m */,
+				D91FB8141D08A47500AB609E /* FISUserIndexTableViewController.h */,
+				D91FB8151D08A47500AB609E /* FISUserIndexTableViewController.m */,
+				D91FB8191D08A88500AB609E /* FISNewsFeedTableViewController.h */,
+				D91FB81A1D08A88500AB609E /* FISNewsFeedTableViewController.m */,
+				D91FB81C1D08AEEF00AB609E /* FISTextTableViewCell.h */,
+				D91FB81D1D08AEEF00AB609E /* FISTextTableViewCell.m */,
+				D91FB8221D08AF1C00AB609E /* FISCoverImageTableViewCell.h */,
+				D91FB8231D08AF1C00AB609E /* FISCoverImageTableViewCell.m */,
+				D91FB8251D08AF3100AB609E /* FISImageTableViewCell.h */,
+				D91FB8261D08AF3100AB609E /* FISImageTableViewCell.m */,
 			);
 			path = facepad;
 			sourceTree = "<group>";
@@ -359,11 +384,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D91FB80D1D089FC100AB609E /* FISFeedPost.m in Sources */,
+				D91FB8161D08A47500AB609E /* FISUserIndexTableViewController.m in Sources */,
+				D91FB8241D08AF1C00AB609E /* FISCoverImageTableViewCell.m in Sources */,
+				D91FB81B1D08A88500AB609E /* FISNewsFeedTableViewController.m in Sources */,
 				4BF6F18D544D4B43AB53CEC1 /* FISAppDelegate.m in Sources */,
 				D91FB8131D08A08A00AB609E /* FISImagePost.m in Sources */,
 				F2DA577D1EC348D78215A834 /* main.m in Sources */,
 				D91FB8101D08A05200AB609E /* FISTextPost.m in Sources */,
 				D91FB80A1D089EFE00AB609E /* FISUser.m in Sources */,
+				D91FB81E1D08AEEF00AB609E /* FISTextTableViewCell.m in Sources */,
+				D91FB8271D08AF3100AB609E /* FISImageTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
