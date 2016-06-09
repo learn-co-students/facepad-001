@@ -43,7 +43,9 @@
 //}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.user.posts count];
+    NSInteger rows = [self.user.posts count];
+    rows = rows++;
+    return rows;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -59,7 +61,7 @@
     } else {
         id obj = self.user.posts[indexPath.row];
         if ([obj isKindOfClass:[FISTextPost class]]) {
-            FISTextPost *post = self.user.posts[indexPath.row];
+            FISTextPost *post = obj;
             NSString *SimpleIdentifier = @"textCell";
             FISTextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimpleIdentifier];
             cell.profileUsername.text = self.user.username;
@@ -67,7 +69,7 @@
             cell.postContent.text = post.textContent;
             return cell;
         } else if ([obj isKindOfClass:[FISImagePost class]]) {
-            FISImagePost *post = self.user.posts[indexPath.row];
+            FISImagePost *post = obj;
             NSString *SimpleIdentifier = @"imageCell";
             FISImageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimpleIdentifier];
             cell.profileUsername.text = self.user.username;
