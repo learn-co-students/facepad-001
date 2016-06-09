@@ -7,6 +7,12 @@
 //
 
 #import "FISNewsFeedTableViewController.h"
+#import "FISCoverImageTableViewCell.h"
+#import "FISTextTableViewCell.h"
+#import "FISImageTableViewCell.h"
+#import "FISImageTableViewCell.h"
+#import "FISTextPost.h"
+#import "FISImagePost.h"
 
 @interface FISNewsFeedTableViewController ()
 
@@ -31,25 +37,44 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//#warning Incomplete implementation, return the number of sections
+//    return 0;
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    NSUInteger posts = [self.user.posts count];
+    return posts + 1;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+    if (indexPath.row == 0) {
+        NSString *SimpleIdentifier = @"headerCell";
+        FISCoverImageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimpleIdentifier];
+
+//        if (cell == nil) {
+//            cell = [[FISCoverImageTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimpleIdentifier];
+//        }
+        return cell;
+    } else if ([self.user.posts[indexPath.row] isKindOfClass:[FISTextPost class]]) {
+        FISTextPost *post = self.user.posts[indexPath.row];
+        NSString *SimpleIdentifier = @"textCell";
+        FISTextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimpleIdentifier];
+        cell.profileUsername.text = self.user.username;
+        cell.profilePic.image = self.user.profilePic;
+        cell.postContent.text = post.textContent;
+        return cell;
+    } else if ([self.user.posts[indexPath.row] isKindOfClass:[FISImagePost class]]) {
+        FISImagePost *post = self.user.posts[indexPath.row];
+        NSString *SimpleIdentifier = @"imageCell";
+        FISImageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimpleIdentifier];
+        cell.profileUsername.text = self.user.username;
+        cell.profilePic.image = self.user.profilePic;
+        cell.contentImage.image = post.imageContent;
+        return cell;
+    }
+    return nil;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
