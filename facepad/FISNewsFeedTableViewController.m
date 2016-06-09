@@ -43,35 +43,38 @@
 //}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSUInteger posts = [self.user.posts count];
-    return posts + 1;
+    return [self.user.posts count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         NSString *SimpleIdentifier = @"headerCell";
         FISCoverImageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimpleIdentifier];
+        cell.cover.image = self.user.cover;
 
-//        if (cell == nil) {
-//            cell = [[FISCoverImageTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimpleIdentifier];
-//        }
+        if (cell == nil) {
+            cell = [[FISCoverImageTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimpleIdentifier];
+        }
         return cell;
-    } else if ([self.user.posts[indexPath.row] isKindOfClass:[FISTextPost class]]) {
-        FISTextPost *post = self.user.posts[indexPath.row];
-        NSString *SimpleIdentifier = @"textCell";
-        FISTextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimpleIdentifier];
-        cell.profileUsername.text = self.user.username;
-        cell.profilePic.image = self.user.profilePic;
-        cell.postContent.text = post.textContent;
-        return cell;
-    } else if ([self.user.posts[indexPath.row] isKindOfClass:[FISImagePost class]]) {
-        FISImagePost *post = self.user.posts[indexPath.row];
-        NSString *SimpleIdentifier = @"imageCell";
-        FISImageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimpleIdentifier];
-        cell.profileUsername.text = self.user.username;
-        cell.profilePic.image = self.user.profilePic;
-        cell.contentImage.image = post.imageContent;
-        return cell;
+    } else {
+        id obj = self.user.posts[indexPath.row];
+        if ([obj isKindOfClass:[FISTextPost class]]) {
+            FISTextPost *post = self.user.posts[indexPath.row];
+            NSString *SimpleIdentifier = @"textCell";
+            FISTextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimpleIdentifier];
+            cell.profileUsername.text = self.user.username;
+            cell.profilePic.image = self.user.profilePic;
+            cell.postContent.text = post.textContent;
+            return cell;
+        } else if ([obj isKindOfClass:[FISImagePost class]]) {
+            FISImagePost *post = self.user.posts[indexPath.row];
+            NSString *SimpleIdentifier = @"imageCell";
+            FISImageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimpleIdentifier];
+            cell.profileUsername.text = self.user.username;
+            cell.profilePic.image = self.user.profilePic;
+            cell.contentImage.image = post.imageContent;
+            return cell;
+        }
     }
     return nil;
 }
