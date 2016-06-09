@@ -32,10 +32,10 @@
     imagePost1.imageContent = [UIImage imageNamed:@"flying"];
     imagePost1.user = testUser;
     
-    testUser.posts = [@[textPost1, imagePost1] mutableCopy];
+    testUser.posts = @[textPost1, imagePost1];
     
     self.users = @[testUser];
-    
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
