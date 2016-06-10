@@ -43,8 +43,7 @@
 //}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSInteger rows = [self.user.posts count];
-    rows = rows++;
+    NSInteger rows = [self.user.posts count] + 1;
     return rows;
 }
 
