@@ -59,7 +59,7 @@
         }
         return cell;
     } else {
-        id obj = self.user.posts[indexPath.row];
+        id obj = self.user.posts[indexPath.row -1];
         if ([obj isKindOfClass:[FISTextPost class]]) {
             FISTextPost *post = obj;
             NSString *SimpleIdentifier = @"textCell";
